@@ -22,7 +22,14 @@ $('.dd').on('change', function() {
 
 function updateSerialization(url, updatedSerialization) {
 
-   
+    // $.ajax(function() {
+    //     type : 'POST',
+    //     url : url,
+    //     data : { updatedSerialization : updatedSerialization },
+    //     success : function() {
+    //         console.log('updated');
+    //     }
+    // });
 
     $.post(url, {updatedSerialization : updatedSerialization}, function(response){
         $('#reload_section').html(response);
